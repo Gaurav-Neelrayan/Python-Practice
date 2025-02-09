@@ -1,27 +1,26 @@
 print("Welcome To Quiz Game")
-print("Answer The Following Game Correctly To Win")
+print("Answer The Following Questions Correctly To Win!")
 
-Prize_Money = [10000,50000,100000,5000000,2000000,3000000,4000000,5000000,10000000,10000000000]
+Prize_Money = [10000, 50000, 100000, 500000, 2000000, 3000000, 4000000, 5000000, 10000000, 10000000000]
 Question = [
     {"Question": "What phone company produced the 3310?",
-     "Option": ["A.Samsung", "B.Apple", "C.Motorola", "D.Nokia"], "Answer": "D"},
+     "Option": ["A. Samsung", "B. Apple", "C. Motorola", "D. Nokia"], "Answer": "D"},
     {"Question": "How many stars are on the Chinese flag?",
-     "Option": ["A.3", "B.6", "C.5", "D.8"], "Answer": "C"},
+     "Option": ["A. 3", "B. 6", "C. 5", "D. 8"], "Answer": "C"},
     {"Question": "Which planet is closest to the sun?",
-     "Option": ["A.Earth", "B.Venus", "C.Jupiter", "D.Mercury"],"Answer": "B"},
+     "Option": ["A. Earth", "B. Venus", "C. Jupiter", "D. Mercury"], "Answer": "D"},
     {"Question": "Which is the only body part that is fully grown from birth?",
-"Option": ["A.Eyes", "B.Noise", "C.Mouth", "D.Hands",],"Answer": "C"},
-    {"Question":"In what year did World War II end?",
-"Option": ["A.1930", "B.1950", "C.1945", "D.1944"],"Answer": "C"},
-    {"Question":"Where did sushi originate?",
-"Option": ["A.China", "B.Korea", "C.Japan", "D.Nepal"],"Answer": "C"},
+     "Option": ["A. Eyes", "B. Nose", "C. Mouth", "D. Hands"], "Answer": "A"},
+    {"Question": "In what year did World War II end?",
+     "Option": ["A. 1930", "B. 1950", "C. 1945", "D. 1944"], "Answer": "C"},
+    {"Question": "Where did sushi originate?",
+     "Option": ["A. China", "B. Korea", "C. Japan", "D. Nepal"], "Answer": "C"},
     {"Question": "What year was the first iPhone released?",
-"Option": ["A.2005", "B.2008", "C.2006", "D.2007"],"Answer": "C"},
+     "Option": ["A. 2005", "B. 2008", "C. 2006", "D. 2007"], "Answer": "D"},
     {"Question": "What is the national sport of Japan?",
-"Option": ["A.Sumo wrestling", "B.Baseball", "C.Karate", "D.Soccer"],"Answer":"A"},
+     "Option": ["A. Sumo wrestling", "B. Baseball", "C. Karate", "D. Soccer"], "Answer": "A"},
     {"Question": "How many hearts does an octopus have?",
-"Option": ["A.3", "B.1", "C.4", "D.6"],"Answer": "A"},
-
+     "Option": ["A. 3", "B. 1", "C. 4", "D. 6"], "Answer": "A"},
 ]
 
 Winning = 0
@@ -29,8 +28,8 @@ Winning = 0
 for i in range(len(Question)):
     Q = Question[i]
     print(f"\nQuestion {i + 1}: {Q['Question']}")
-    for Option in Q['Option']:
-        print(Option)
+    for option in Q['Option']:
+        print(option)
 
     answer = input("Your Answer (A/B/C/D): ").strip().upper()
 
@@ -40,7 +39,7 @@ for i in range(len(Question)):
     else:
         print("Wrong answer. Game Over!")
         print(f"You won Rs. {Winning}.")
-        break
+        break  # Stops the game if the user answers incorrectly
 
 else:
     print(f"Congratulations! You won the grand prize of Rs. {Winning}!")
