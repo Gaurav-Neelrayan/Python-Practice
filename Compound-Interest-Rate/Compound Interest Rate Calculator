@@ -1,0 +1,31 @@
+Principal = 0
+Rate = 0
+Time = 0
+
+while True:
+    Principal = float(input("Enter Your Amount: "))
+    if Principal < 0:
+        print("Amount can't be zero ")
+
+    else:
+        break
+
+while True:
+    Rate = float(input("Enter Your Interest Rate: "))
+    if Rate < 0:
+        print("Amount can't be zero ")
+
+    else:
+        break
+
+while True:
+    Time = float(input("Enter Your Time: "))
+    if Time < 0:
+        print("Amount can't be zero ")
+
+    else:
+        break
+
+
+total = Principal * pow((1 + Rate / 100), Time)
+print(f"Balance after {Time} Years {total:.2f}")
